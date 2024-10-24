@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<sdf version='1.6'>
+<sdf version='1.11'>
   <world name='default'>
 
     <plugin
@@ -24,6 +24,11 @@
       filename="gz-sim-imu-system"
       name="gz::sim::systems::Imu">
     </plugin>
+
+    <physics name="1ms" type="ignored">
+        <max_step_size>0.005</max_step_size>
+        <real_time_factor>1.0</real_time_factor>
+    </physics>
 
   <model name='AirconditionerA_01_001'>
         <static>true</static>
